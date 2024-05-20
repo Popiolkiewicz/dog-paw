@@ -1,0 +1,26 @@
+:root {
+  --primary: #89aee6;
+  --secondary: #5f96e9;
+}
+
+body {
+  background-color: var(--primary);
+}
+
+main {
+  padding: 8px;
+  text-align: center;
+}
+
+header {
+  padding: 8px;
+  text-align: center;
+  background-color: var(--secondary);
+}
+
+.report-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
