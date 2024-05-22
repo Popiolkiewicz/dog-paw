@@ -11,8 +11,6 @@ const router = () => {
 
     const routeFound = routes.find(r => location.pathname.endsWith(r.path));
 
-    console.log(routeFound);
-
     let view;
     if (!routeFound) {
         console.warn('Route link was not found, redirecting to home...');
@@ -22,7 +20,7 @@ const router = () => {
     }
 
     document.querySelector("#app").innerHTML = view.getView();
-    view.loadAdditionalScript();
+    view.initController();
 }
 
 window.addEventListener("popstate", router);

@@ -1,6 +1,7 @@
 import ReportController from "./../controller/report-controller.js";
+import View from "./view.js";
 
-export default class ReportView {
+export default class ReportView extends View {
     getView() {
         return `
             <h1>Report missing animal</h1>
@@ -27,7 +28,7 @@ export default class ReportView {
         `;
     }
 
-    loadAdditionalScript() {
-        new ReportController().initializeListeners();
+    initController() {
+        new ReportController().init();
     }
 }
