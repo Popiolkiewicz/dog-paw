@@ -4,7 +4,7 @@ export default class ContactView extends View{
     
     getView() {
         return `
-            <h1>Welcome to contact view!</h1>
+            <h3>Welcome to contact view!</h3>
         `;
     }
 }

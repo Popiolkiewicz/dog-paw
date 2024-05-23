@@ -1,26 +1,130 @@
 :root {
-  --primary: #89aee6;
-  --secondary: #5f96e9;
+  --c-primary: #bad0f1;
+  --c-secondary: #8fafe0;
+  --c-font-primary: black;
+  --border-radius: 4px;
+  --font-family: 'Segoe UI';
+  --width-inputs: 250px;
+  --height-textarea: 250px;
+  --form-column-gap: 0.5em;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a:link, a:visited {
+  display: inline-block;
+  padding: 4px;
+  color: var(--c-font-primary);
+  border-radius: var(--border-radius);
+}
+
+a:hover, a:active {
+  background-color: var(--c-primary)
+}
+
+select,
+textarea,
+input[type=date],
+input[type=datetime-local],
+input[type=email],
+input[type=month],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=text],
+input[type=time],
+input[type=url],
+input[type=week] {
+  max-width: var(--width-inputs);
+  width: 100%;
+}
+
+textarea {
+  height: var(--height-textarea);
+}
+
+select,
+textarea,
+input[type="text"],
+input[type="checkbox"],
+input[type="textarea"] {
+  border-radius: var(--border-radius);
+  border: 0px;
+}
+
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input::file-selector-button {
+  cursor: pointer;
+}
+
+label {
+  display: block;
+}
+
+button {
+  background-color: var(--c-primary);
+  border-color: var(--c-secondary);
+  border-radius: var(--border-radius);
+  color: var(--c-font-primary);
+  padding: 4px;
+  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+}
+
+button:hover {
+  box-shadow: 1px 1px 2px 0px var(--c-secondary);
+}
+
+select:focus-visible,
+input[type="text"]:focus-visible,
+textarea:focus-visible
+{
+  outline: var(--c-secondary) solid 2px;
+  outline-offset: -2px;
+}
+
+input[type="checkbox"] {
+  accent-color: var(--c-secondary);
 }
 
 body {
-  background-color: var(--primary);
-}
-
-main {
-  padding: 8px;
-  text-align: center;
+  background-color: var(--c-primary);
+  margin: 0px;
 }
 
 header {
-  padding: 8px;
   text-align: center;
-  background-color: var(--secondary);
+  background-color: var(--c-secondary);
+  border-radius: var(--border-radius);
+  max-width: 1280px;
+  margin: auto;
+}
+
+nav {
+  padding: 8px;
+}
+
+main {
+  max-width: 1280px;
+  margin: auto;
+  padding: 8px;
 }
 
 .report-form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  gap: var(--form-column-gap);
 }
 
+.report-form > * {
+}

@@ -6,6 +6,7 @@ export default class ReportController {
             const formData = {
                 name: document.getElementById('name').value,
                 kind: document.getElementById('kind').value,
+                dissapearanceDetails: document.getElementById('dissDetails').value,
                 isVaccinated: document.getElementById('isVaccinated').value
             };
             fetch('http://127.0.0.1:3333/api/report', {

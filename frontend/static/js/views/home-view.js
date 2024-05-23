@@ -4,7 +4,7 @@ export default class HomeView extends View {
 
     getView() {
         return `
-            <h1>Welcome to home view!</h1>
+            <h3>Welcome to home view!</h3>
         `;
     }
 };

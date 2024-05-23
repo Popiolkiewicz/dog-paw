@@ -4,26 +4,30 @@ import View from "./view.js";
 export default class ReportView extends View {
     getView() {
         return `
-            <h1>Report missing animal</h1>
+            <h3>Report missing animal</h3>
             <p>Please provide information about missing animal.</p>
-            <div>
-                <label for="name">Name:</label>
-                <input id="name" type="text" title="Animal name" ></input>
+            <div class="report-form">
+                <div>
+                    <label for="name">Name</label>
+                    <input id="name" type="text" title="Animal name"></input>
+                </div>
+                <div>
+                    <label for="kind">Kind</label>
+                    <select id="kind" name="kind" title="Animal kind" >
+                        <option value="cat">Cat</option>
+                        <option value="dog">Dog</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="dissDetails">Dissapearance details</label>
+                    <textarea id="dissDetails"></textarea>
+                </div>
+                <div>
+                    <label for="isVaccinated">Is vaccinated?</label>
+                    <input id="isVaccinated" type="checkbox" title="Some checkbox"></input>
+                </div>
             </div>
-            <div>
-                <label for="kind">Kind:</label>
-                <select id="kind" name="kind" title="Animal kind" >
-                    <option value="cat">Cat</option>
-                    <option value="dog">Dog</option>
-                </select>
-            </div>
-            <div>
-                <input id="isVaccinated" type="checkbox" title="Some checkbox"></input>
-                <label for="isVaccinated">Is vaccinated?</label>
-            </div>
-            <div>
-                <button id="sendReportButton">Send report</button>
-            </div>
+            <button id="sendReportButton">Send report</button>
             <p id="responseMessage"></p>
         `;
     }
