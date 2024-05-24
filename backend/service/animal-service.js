@@ -6,9 +6,13 @@ exports.getMissingList = () => animalDa.getAll().filter(a => a.context === 'miss
 
 exports.reportMissing = (animal) => {
     console.log("Processing missing report for: " + JSON.stringify(animal));
-    const foundAnimal = animalDa.getAll().find(a => a.name === animal.name && a.context === animal.context);
+    const foundAnimal = animalDa.getAll().find(a => a.name === animal.name);
     if (foundAnimal) {
-        return "Animal found!";
+        if (foundAnimal.context === 'found') {
+          return "Animal found!";
+        } else if (foundAnimal.context === 'missing') {
+          return "No animal was found, but you reported your missing animal already.";
+        }
     } else {
         animalDa.add({ ...animal, context: 'missing'});
         return "No animal was found, your report has been submitted. ";
