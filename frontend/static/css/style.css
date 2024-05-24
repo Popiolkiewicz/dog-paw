@@ -7,6 +7,7 @@
   --width-inputs: 250px;
   --height-textarea: 250px;
   --form-column-gap: 0.5em;
+  --input-padding: 4px;
   box-sizing: border-box;
   font-family: var(--font-family);
 }
@@ -44,6 +45,7 @@ input[type=url],
 input[type=week] {
   max-width: var(--width-inputs);
   width: 100%;
+  padding: var(--input-padding);
 }
 
 textarea {

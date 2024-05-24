@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
-const animalService = require('./backend/animal-service.js');
+const animalService = require('./backend/service/animal-service.js');
 const env = {
     port: 3333,
 }
