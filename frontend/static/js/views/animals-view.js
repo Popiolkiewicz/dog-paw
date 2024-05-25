@@ -7,6 +7,7 @@ export default class AnimalsView extends View {
         return `
           <h3>View our animal database to see reported missing and found animals.</h3>
           <p id="returnedData"></p>
+          <table id="animalsTable" class="animals-table"></table>
         `;
     }
 

@@ -7,7 +7,7 @@ export default class ReportController {
                 name: document.getElementById('name').value,
                 kind: document.getElementById('kind').value,
                 dissapearanceDetails: document.getElementById('dissDetails').value,
-                isVaccinated: document.getElementById('isVaccinated').value
+                isVaccinated: document.getElementById('isVaccinated').checked
             };
             fetch('http://127.0.0.1:3333/api/report', {
                 method: 'POST',

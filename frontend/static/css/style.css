@@ -1,13 +1,16 @@
 :root {
   --c-primary: #bad0f1;
   --c-secondary: #8fafe0;
+  --c-tertiary: #5e95e7;
   --c-font-primary: black;
+  --c-font-tertiary: #ffffff;
   --border-radius: 4px;
   --font-family: 'Segoe UI';
   --width-inputs: 250px;
   --height-textarea: 250px;
   --form-column-gap: 0.5em;
   --input-padding: 4px;
+  --table-padding: 8px 8px;
   box-sizing: border-box;
   font-family: var(--font-family);
 }
@@ -119,11 +122,33 @@ nav {
 main {
   max-width: 1280px;
   margin: auto;
-  padding: 8px;
 }
 
 .report-form {
   display: flex;
   flex-direction: column;
   gap: var(--form-column-gap);
+}
+
+.animals-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.animals-table thead tr {
+  background-color: var(--c-tertiary);
+  color: var(--c-font-tertiary);
+}
+
+.animals-table th, 
+.animals-table td {
+  padding: var(--table-padding);
+}
+
+.animals-table tbody tr:nth-of-type(even) {
+  background-color: var(--c-secondary);
+}
+
+.animals-table tbody tr:active {
+  color: var(--c-font-tertiary);
 }
