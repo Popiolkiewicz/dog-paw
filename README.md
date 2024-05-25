@@ -6,7 +6,8 @@ Key concepts/challenges:
 - Single page application (SPA) - routing is handled on client side,
 - Microbackend using node,
 - Persistence using json files
+- No external HTML templating engine 
 
 ------------------------------------------------
 
-To start web server, run `nodemon server.js` inside main directory.
+To start web server, run `npm run start` inside main directory.

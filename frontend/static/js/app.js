@@ -1,11 +1,13 @@
 import HomeView from "./views/home-view.js";
 import ReportView from "./views/report-view.js";
 import ContactView from "./views/contact-view.js";
+import AnimalsView from "./views/animals-view.js";
 
 const router = () => {
     const routes = [
         { path: "/", view: HomeView },
         { path: "/report", view: ReportView },
+        { path: "/animals", view: AnimalsView },
         { path: "/contact", view: ContactView }
     ];
 

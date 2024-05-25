@@ -1,5 +1,7 @@
 const animalDa = require('../data-access/animal-da.js');
 
+exports.getAll = () => animalDa.getAll();
+
 exports.getFoundList = () => animalDa.getAll().filter(a => a.context === 'found');
 
 exports.getMissingList = () => animalDa.getAll().filter(a => a.context === 'missing');

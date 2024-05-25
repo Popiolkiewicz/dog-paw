@@ -15,7 +15,10 @@ app.post('/api/report', (req, res) => {
     const responseMessage = animalService.reportMissing(req.body);
     res.send(`{ "responseMessage": "${responseMessage}" }`);
 });
-
+app.get('/api/animals', (req, res) => {
+    const data = animalService.getAll();
+    res.send(`{ "data": ${JSON.stringify(data)} }`);
+});
 app.get("*", function (req, res) {
     res.sendFile(__dirname + "/frontend/static/index.html");
 });
