@@ -11,3 +11,5 @@ Key concepts/challenges:
 ------------------------------------------------
 
 To start web server, run `npm run start` inside main directory.
+
+Frontend client is available under `http://localhost:3333/client/`.

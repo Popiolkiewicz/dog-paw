@@ -21,7 +21,7 @@ const router = () => {
         view = new routeFound.view();
     }
 
-    document.querySelector("#app").innerHTML = view.getView();
+    document.getElementById("app").innerHTML = view.getView();
     view.initController();
 }
 

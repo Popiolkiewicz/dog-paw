@@ -1,7 +1,9 @@
-export default class ReportController {
+import Controller from "./controller.js";
+
+export default class ReportController extends Controller {
 
     init = function() {
-        document.querySelector('#sendReportButton').addEventListener('click', (event) => {
+        document.getElementById('sendReportButton').addEventListener('click', (event) => {
             event.preventDefault();
             const formData = {
                 name: document.getElementById('name').value,
@@ -9,7 +11,7 @@ export default class ReportController {
                 dissapearanceDetails: document.getElementById('dissDetails').value,
                 isVaccinated: document.getElementById('isVaccinated').checked
             };
-            fetch('http://127.0.0.1:3333/api/report', {
+            fetch(`${apiUrl}/report`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

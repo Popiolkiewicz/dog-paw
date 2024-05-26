@@ -1,7 +1,9 @@
-export default class AnimalsController {
+import Controller from "./controller.js";
+
+export default class AnimalsController extends Controller {
     fetchedData;
     init = function() {
-        fetch('http://127.0.0.1:3333/api/animals', {
+        fetch(`${this.apiUrl}/animals`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
