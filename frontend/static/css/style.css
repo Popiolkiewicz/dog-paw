@@ -139,12 +139,14 @@ main {
   background-color: var(--c-tertiary);
   color: var(--c-font-tertiary);
 }
+.animals-table thead tr:nth-child(2) {
+  background-color: var(--c-secondary);
+}
 
 .animals-table th, 
 .animals-table td {
   padding: var(--table-padding);
 }
-
 .animals-table tbody tr:nth-of-type(even) {
   background-color: var(--c-secondary);
 }
